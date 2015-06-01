@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>JSBLOCK Demo: Multiplying 2 numbers</title>
+    <script src="bower_components/blocks/dist/blocks.min.js"></script>
+</head>
+<body>
+Number1: <input type=number
+                placeholder="Enter a Number"
+                data-query="val(number1)"/>
+<br/>
+Number2: <input type=number
+                placeholder="Enter a Number"
+                data-query="val(number2)"/>
+<h1>Multiplication of {{number1}} and {{number2}} = {{number1 * number2}}</h1>
+
+<script>
+    blocks.query({
+        number1: blocks.observable(2),
+        number2: blocks.observable(3)
+    });
+</script>
+</body>
+</html>
